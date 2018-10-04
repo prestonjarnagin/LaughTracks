@@ -1,5 +1,6 @@
-require "./app/models/comedian.rb"
-require "activerecord-import/base"
+# require "./app/models/comedian.rb"
+# require "activerecord-import/base"
+require File.expand_path('../../config/environment.rb', __FILE__)
 
 Comedian.destroy_all
 

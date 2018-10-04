@@ -15,6 +15,16 @@ RSpec.describe Comedian do
         comic = Comedian.create(name: 'Mitch Hedberg', age: 51)
         expect(comic).to_not be_valid
       end
+
+      it 'should be valid with correct params' do
+        comic = Comedian.create(name: 'Mitch Hedberg', age: 51, city:'Livingston')
+        expect(comic).to be_valid
+      end
+
+      it "can have many specials" do
+        association = Comedian.reflect_on_association(:specials)
+        expect(association.macro).to eq :has_many
+      end
     end
   end
 end
