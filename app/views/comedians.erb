@@ -1,4 +1,12 @@
   <p>Comedians</p>
+
+  <div class="stats">
+    Total Specials: <%= @specials.count %>
+    Average Age: <%= @comedians.average_age %>
+    Cities: <%= @comedians.pluck(:city).uniq %>
+    <!-- Do these operations belong here?  -->
+  </div>
+
   <div class="comedian">
     <% @comedians.each do |comedian| %>
       <li>Name: <%= comedian.name %></li>
