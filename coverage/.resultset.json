@@ -176,6 +176,26 @@
         null,
         null
       ],
+      "/Users/prestonjarnagin/turing/2module/projects/LaughTracks/spec/features/new_comedian_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/Users/prestonjarnagin/turing/2module/projects/LaughTracks/spec/models/comedian_spec.rb": [
         1,
         1,
@@ -259,6 +279,6 @@
         null
       ]
     },
-    "timestamp": 1538849852
+    "timestamp": 1538853878
   }
 }
