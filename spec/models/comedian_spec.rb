@@ -27,4 +27,16 @@ RSpec.describe Comedian do
       end
     end
   end
+
+  describe 'Class Methods' do
+    it 'can calculate average age of all comedians' do
+      comic = Comedian.create(name: 'Mitch Hedberg', age: 20, city:'Livingston')
+      comic = Comedian.create(name: 'Mitch Hedberg', age: 40, city:'Livingston')
+      actual = Comedian.average_age
+      expect(actual).to eq 30
+      comic = Comedian.create(name: 'Mitch Hedberg', age: 60, city:'Livingston')
+      actual = Comedian.average_age
+      expect(actual).to eq 40
+    end
+  end
 end

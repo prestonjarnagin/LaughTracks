@@ -1,7 +1,13 @@
 class LaughTracksApp < Sinatra::Base
 
   get '/comedians' do
-    @comedians = Comedian.all
-    erb :"comedians"
+    if params.empty?
+      @comedians = Comedian.all
+      erb :"comedians"
+    else
+      @comedians = Comedian.where(age:params[:age])
+      erb :"comedians"
+    end
   end
+
 end

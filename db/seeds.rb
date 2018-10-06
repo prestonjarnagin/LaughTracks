@@ -4,9 +4,38 @@ require File.expand_path('../../config/environment.rb', __FILE__)
 
 Comedian.destroy_all
 
-comedian_1 = Comedian.create!(name: "Kevin Hart", age: 39, city: "Philadelphia")
+comedian = Comedian.create(name: "George Carlin", age: 71, city: "New York City")
+special_1 = Special.create(comedian_id:1,name:"George Carlin: Back in Town", runtime: 60, thumbnail: "https://www.imdb.com/title/tt0246641/mediaviewer/rm3686833920?ref_=tt_ov_i")
+special_2 = Special.create(comedian_id:1, name:"George Carlin: You are All Diseased",runtime: 60, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwj47aK8wO_dAhVM_oMKHUNRALoQjRx6BAgBEAU&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0246645%2F&psig=AOvVaw21jIpIiluPNvCuhtSx7lNB&ust=1538835869327166")
+special_3 = Special.create(comedian_id:1, name:"George Carlin: Again!", runtime: 81, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiYq_XqwO_dAhWL5oMKHYoqC6gQjRx6BAgBEAU&url=https%3A%2F%2Fwww.walmart.com%2Fip%2FGeorge-Carlin-Again-DVD%2F1523165&psig=AOvVaw1jNxojiy_IESioMNITJjML&ust=1538835964991855")
+puts "Created #{comedian.name}"
 
-special_1_1 = Special.create(name:"I'm a Grown Little Man", comedian_id:1, url: "https://www.google.com/imgres?imgurl=https://m.media-amazon.com/images/M/MV5BMjI4MTYwNTUzMF5BMl5BanBnXkFtZTcwODk1Mjk3Mw@@._V1_UY268_CR4,0,182,268_AL_.jpg&imgrefurl=https://www.imdb.com/title/tt1420554/&h=268&w=182&tbnid=ePFzOASuwEzOKM:&q=Kevin+Hart:+I%27m+a+Grown+Little+Man+kevin+hart&tbnh=160&tbnw=108&usg=AI4_-kQGDsCU71YQYhVoFmXpfqqgtFZZQw&vet=1&docid=nblZqw9_W3mRFM&itg=1&sa=X&ved=2ahUKEwiCrPiH0u3dAhVr5YMKHXDeCCEQ_B0wCnoECAkQFA")
-special_1_2 = Special.create(name:"Laugh at My Pain", comedian_id:1, url: "https://www.google.com/imgres?imgurl=https://m.media-amazon.com/images/M/MV5BMjI4MTYwNTUzMF5BMl5BanBnXkFtZTcwODk1Mjk3Mw@@._V1_UY268_CR4,0,182,268_AL_.jpg&imgrefurl=https://www.imdb.com/title/tt1420554/&h=268&w=182&tbnid=ePFzOASuwEzOKM:&q=Kevin+Hart:+I%27m+a+Grown+Little+Man+kevin+hart&tbnh=160&tbnw=108&usg=AI4_-kQGDsCU71YQYhVoFmXpfqqgtFZZQw&vet=1&docid=nblZqw9_W3mRFM&itg=1&sa=X&ved=2ahUKEwiCrPiH0u3dAhVr5YMKHXDeCCEQ_B0wCnoECAkQFA")
-special_1_3 = Special.create(name:"Let Me Explain", comedian_id:1, url: "https://www.google.com/imgres?imgurl=https://m.media-amazon.com/images/M/MV5BMjI4MTYwNTUzMF5BMl5BanBnXkFtZTcwODk1Mjk3Mw@@._V1_UY268_CR4,0,182,268_AL_.jpg&imgrefurl=https://www.imdb.com/title/tt1420554/&h=268&w=182&tbnid=ePFzOASuwEzOKM:&q=Kevin+Hart:+I%27m+a+Grown+Little+Man+kevin+hart&tbnh=160&tbnw=108&usg=AI4_-kQGDsCU71YQYhVoFmXpfqqgtFZZQw&vet=1&docid=nblZqw9_W3mRFM&itg=1&sa=X&ved=2ahUKEwiCrPiH0u3dAhVr5YMKHXDeCCEQ_B0wCnoECAkQFA")
-puts "Created #{comedian_1.name}"
+comedian = Comedian.create(name: "Kevin Hart", age: 49, city: "Philadelphia")
+special_1 = Special.create(comedian_id:2, name:"George Carlin: Back in Town", runtime: 60, thumbnail: "https://www.imdb.com/title/tt0246641/mediaviewer/rm3686833920?ref_=tt_ov_i")
+special_2 = Special.create(comedian_id:2, name:"George Carlin: You are All Diseased",runtime: 60, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwj47aK8wO_dAhVM_oMKHUNRALoQjRx6BAgBEAU&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt0246645%2F&psig=AOvVaw21jIpIiluPNvCuhtSx7lNB&ust=1538835869327166")
+special_3 = Special.create(comedian_id:2, name:"George Carlin: Again!", runtime: 81, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiYq_XqwO_dAhWL5oMKHYoqC6gQjRx6BAgBEAU&url=https%3A%2F%2Fwww.walmart.com%2Fip%2FGeorge-Carlin-Again-DVD%2F1523165&psig=AOvVaw1jNxojiy_IESioMNITJjML&ust=1538835964991855")
+puts "Created #{comedian.name}"
+
+comedian = Comedian.create(name: "Amy Schumer", age: 37, city: "New York City")
+special_1 = Special.create(comedian_id:3, name:"Special 1", runtime: 45, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+special_2 = Special.create(comedian_id:3, name:"Specail 2", runtime: 60, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+special_3 = Special.create(comedian_id:3, name:"Special 3", runtime: 89, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+puts "Created #{comedian.name}"
+
+comedian = Comedian.create(name: "Steve Martin", age: 73, city: "Waco")
+special_1 = Special.create(comedian_id:4, name:"Special 1", runtime: 45, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+special_2 = Special.create(comedian_id:4, name:"Specail 2", runtime: 60, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+special_3 = Special.create(comedian_id:4, name:"Special 3", runtime: 89, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+puts "Created #{comedian.name}"
+
+comedian = Comedian.create(name: "Patton Oswalt", age: 49, city: "Portsmouth")
+special_1 = Special.create(comedian_id:5,name:"Special 1", runtime: 45, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+special_2 = Special.create(comedian_id:5,name:"Specail 2", runtime: 60, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+special_3 = Special.create(comedian_id:5,name:"Special 3", runtime: 89, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+puts "Created #{comedian.name}"
+
+comedian = Comedian.create(name: "Dave Chappelle", age: 45, city: "Washington")
+special_1 = Special.create(comedian_id:6,name:"Special 1", runtime: 45, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+special_2 = Special.create(comedian_id:6,name:"Specail 2", runtime: 60, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+special_3 = Special.create(comedian_id:6,name:"Special 3", runtime: 89, thumbnail: "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwjj17j9we_dAhVDyYMKHdSaBocQjRx6BAgBEAU&url=https%3A%2F%2Fopenclipart.org%2Fdetail%2F233668%2Fspecial&psig=AOvVaw2484IfPMr36JYVLDmUAibA&ust=1538836261720451")
+puts "Created #{comedian.name}"
