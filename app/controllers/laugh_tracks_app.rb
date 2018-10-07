@@ -4,17 +4,19 @@ class LaughTracksApp < Sinatra::Base
     if params.empty?
       @comedians = Comedian.all
       @specials = Special.all
-      erb :"comedians"
     else
       @comedians = Comedian.where(age:params[:age])
       @specials = Special.where(comedian_id: @comedians.ids)
-      erb :"comedians"
     end
+    erb :"comedians"
   end
 
   get '/comedians/new' do
     erb :"new"
   end
-  #
-  # post
+
+  post '/comedians' do
+    Comedian.create(params[:comedian])
+    redirect "/comedians"
+  end
 end
