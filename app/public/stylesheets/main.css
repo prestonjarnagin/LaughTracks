@@ -1,3 +1,80 @@
-comedian {
-  background-color: #ffffcc;
+#main{
+  display: grid;
+  grid-template-rows: 30px 140px
+}
+
+.title{
+  grid-row: 1;
+  align-self: center;
+  justify-self: center;
+}
+
+#stats{
+  grid-row: 2;
+  height: 200px;
+  background: lightblue;
+  display: grid;
+  grid-template-columns: 2fr 2fr 6fr 3fr;
+  grid-template-rows: 15px 30px 6fr;
+  padding: 5px;
+  margin: 5px;
+}
+
+.stat-header{
+  grid-row: 2;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+.stat-info{
+  grid-row: 3;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+#stats-title{
+  grid-row: 1;
+  grid-column: 1/span 4;
+}
+
+#count{
+  grid-column: 1;
+}
+#age{
+  grid-column: 2;
+}
+#cities{
+  grid-column: 3;
+}
+#run-length{
+  grid-column: 4;
+}
+
+#comedians {
+  grid-row: 3;
+  background: lightyellow;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comedian {
+  margin: 10px;
+  width: 200px;
+  height: 360px;
+
+  background: lightgreen;
+}
+
+.comedian-info{
+
+}
+
+.thumbnail{
+  height: 140px;
+  width: auto;
+}
+
+.special{
+  padding: 10px
 }

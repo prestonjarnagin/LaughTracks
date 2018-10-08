@@ -1,21 +1,43 @@
-  <p>Comedians</p>
+<div id=main>
+  <div class="title"> <h3 class="title">Comedians</h3> </div>
+  <div id="stats">
 
-  <div class="stats">
-    Total Specials: <%= @specials.count %>
-    Average Age: <%= @comedians.average_age %>
-    Cities: <%= @comedians.pluck(:city).uniq %>
+    <h3 id="stats-title" class="title"> Stats </h3>
+      <p class="stat-header" id="count-header">Total Specials:</p>
+      <p class="stat-info" id="count-info"><%= @specials.count %></p>
+
+      <p class="stat-header" id="age-header">Total Specials:</p>
+      <p class="stat-info" id="age-info"><%= @comedians.average_age %></p>
+
+      <p class="stat-header" id="city-header">Cities:</p>
+      <p class="stat-info" id="city-info"><%= @comedians.pluck(:city).uniq %></p>
+
+      <p class="stat-header" id="run-header">Average Run Length:</p>
+      <p class="stat-info" id="run-info"><%= @specials.average_runtime %></p>
     <!-- Do these operations belong here?  -->
+
   </div>
 
-  <div class="comedian">
+  <div id="comedians">
     <% @comedians.each do |comedian| %>
-      <li>Name: <%= comedian.name %></li>
-      <li>Age: <%= comedian.age %></li>
-      <li>City: <%= comedian.city %></li>
-      <li>Total Specials: <%=comedian.specials.count%> </li>
-      <br>
+    <div class="comedian">
+      <div class="comedian-info">
+        <div>Name: <%= comedian.name %></div>
+        <div>Age: <%= comedian.age %></div>
+        <div>City: <%= comedian.city %></div>
+        <div>Total Specials: <%=comedian.specials.count%> </div>
+      </div>
+      <div class="special-container">
         <% comedian.specials.each do |special| %>
-          <li> <%= special.name %>
+        <div class= "special">
+          <div> <%= special.name %> </div>
+          <div> <div class="thumbnail_container"> </div>
+            <img src="<%= special.thumbnail  %>" class="thumbnail">
+          </div>
+        </div>
+      </div>
         <% end %>
       <% end %>
+    </div>
   </div>
+</div>
